@@ -12,7 +12,7 @@ class Category(models.Model):
         "Идентификатор",
         unique=True,
         help_text="Идентификатор страницы для URL; разрешены символы латиницы,"
-        "цифры, дефис и подчёркивание.",
+        + "цифры, дефис и подчёркивание.",
     )
     is_published = models.BooleanField(
         "Опубликовано",
@@ -53,7 +53,7 @@ class Post(models.Model):
         "Дата и время публикации",
         auto_now_add=False,
         help_text="Если установить дату и время в будущем"
-        "— можно делать отложенные публикации.",
+        + "— можно делать отложенные публикации.",
     )
     author = models.ForeignKey(
         User,
